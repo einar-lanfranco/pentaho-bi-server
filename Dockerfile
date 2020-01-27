@@ -22,11 +22,12 @@ RUN wget --progress=dot:giga https://razaoinfo.dl.sourceforge.net/project/pentah
 RUN /usr/bin/unzip -q /tmp/pentaho-server.zip -d  $PENTAHO_HOME; \
     rm -f /tmp/pentaho-server.zip; 
 RUN rm -f /opt/pentaho/pentaho-server/promptuser.sh
-
+RUN wget https://jdbc.postgresql.org/download/postgresql-9.4.1212.jre6.jar -O /tmp/postgresql-9.4.1212.jre6.jar
 
 EXPOSE 8080
 
 COPY run_pentaho_server.sh /usr/local/bin
+RUN mv /tmp/postgresql-9.4.1212.jre6.jar /opt/pentaho/pentaho-server/tomcat/lib/postgresql-9.4.1212.jre6.jar
 RUN mkdir -p  /usr/lib/jvm/
 RUN ln -s  /usr/local/openjdk-8/  /usr/lib/jvm/java-1.8.0-openjdk-amd64
 RUN chmod +x /usr/local/bin/run_pentaho_server.sh
