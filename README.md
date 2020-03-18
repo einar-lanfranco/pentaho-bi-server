@@ -23,7 +23,6 @@ Just use something like this in your docker-compose.yml:
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_MULTIPLE_DATABASES=simco
     networks:
       - default
     ports:
