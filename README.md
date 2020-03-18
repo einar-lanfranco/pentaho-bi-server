@@ -29,3 +29,7 @@ Just use something like this in your docker-compose.yml:
     ports:
       - "5432:5432/tcp"
  ```
+
+Whe it is up, you just use web browser and point to  http://localhost:8080/ 
+
+Default credentials: admin/password
