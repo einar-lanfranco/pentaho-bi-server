@@ -4,6 +4,7 @@ It use openjdk:8 as base image and install pentaho 8.3 from sourceforge, it incl
 
 Just use something like this in your docker-compose.yml:
 
+```
   pentaho-bi:
     image: einar1/pentaho-bi:8.2.1
     restart: always
@@ -27,4 +28,4 @@ Just use something like this in your docker-compose.yml:
       - default
     ports:
       - "5432:5432/tcp"
- 
+ ```
