@@ -1,6 +1,6 @@
 # pentaho-bi-server
 Pentaho Server en docker 
-It use openjdk:8 as base image and install pentaho 8.3 from sourceforge, it includes Postgresql support.
+Pentaho Server in docker image, this image use openjdk:8 as base image and install pentaho 8.3 from sourceforge, including connection suppor to Postgresql databases.
 
 Just use something like this in your docker-compose.yml:
 
